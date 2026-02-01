@@ -9,10 +9,10 @@ total_minutes = num_calls * minutes_per_call
 shortfall = total_minutes - available_minutes
 
 # 3) How many full calls you can finish
-completed_calls = available_minutes / minutes_per_call
+completed_calls = available_minutes // minutes_per_call
 
 # 4) How many minutes remain unused
-unused_time = available_minutes // minutes_per_call
+unused_time = available_minutes % minutes_per_call
 
 # Print results
 print("Total minutes needed:", total_minutes)
